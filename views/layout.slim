@@ -1,0 +1,44 @@
+- l = settings.send(yield_content(:locale))
+doctype html
+html
+  head
+    meta content="width=device-width" name="viewport" /
+    title УкрЗахідГеологія
+    link href="/stylesheets/style.css" rel="stylesheet" type="text/css" /
+  body
+    header.row
+      .content
+        a.logo href="#{l[:main][:path]}"
+          img.logo src="/images/logo.png" /
+          span Укрзахідгелогія
+        nav
+          ul
+            li
+              a href="#{l[:main][:path]}"  =l[:main][:name]
+            li
+              a href="#{l[:services][:path]}"  =l[:services][:name]
+              ul.sub
+                - l[:services][:list].each do |service|
+                  li
+                    a href="#{service[:path]}" =service[:name]
+                    ul
+                      - service[:list].each do |subservice|
+                        li
+                          a href="#{subservice[:path]}" =subservice[:name]
+            li
+              a href="#{l[:about][:path]}" =l[:about][:name]
+              ul
+                - l[:about][:list].each do |about|
+                  li
+                    a href="#{about[:path]}" =about[:name] 
+            li
+              a href="#{l[:contacts][:path]}"  =l[:contacts][:name]
+        nav
+          a href="/"  UA
+          a href="/ru"  RU
+          a href="/en"  EN
+        /  a href="/es"  ES
+    section.page
+      section.row
+        section.content
+          == yield

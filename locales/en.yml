@@ -1,0 +1,209 @@
+en:
+  main:
+    name: Main
+    path: /en
+  services:
+    name: Services
+    path: /services
+    list:
+      - name: Oil and gas
+        path: /services/oil-and-gas
+        list:
+          - name: Drilling and well workover
+            path: /services/oil-and-gas/drilling-and-well-workover
+          - name: Engineering and geological support
+            path: /services/oil-and-gas/engineering-and-geological-support
+          - name: Services in deposit development
+            path: /services/oil-and-gas/services-in-deposit-development
+          - name: Joint investment projects
+            path: /services/oil-and-gas/joint-investment-projects
+      - name: Underground water
+        path: /services/underground-water
+        list:
+          - name: Monitoring
+            path: /services/underground-water/monitoring
+          - name: Project reviews
+            path: /services/underground-water/project-reviews
+          - name: Laboratory Research
+            path: /services/underground-water/laboratory-research
+          - name: Well drilling
+            path: /services/underground-water/well-drilling
+          - name: Hydrogeological support
+            path: /services/underground-water/hydrogeological-support
+      - name: Solid minerals
+        path: /services/solid-minerals
+        list:
+          - name: Prospecting works
+            path: /services/solid-minerals/prospecting-works
+          - name: geological-economic appraisal of stocks
+            path: /services/solid-minerals/geological-economic-appraisal-of-stocks
+          - name: Laboratory Research
+            path: /services/solid-minerals/laboratory-research
+          - name: Well drilling
+            path: /services/solid-minerals/well-drilling
+      - name: Other services
+        path: services/other-services
+        list:
+          - name: Laboratory Research
+            path: /services/other-activities/laboratory-research
+          - name: Specialized vehicles services
+            path: /services/other-activities/specialized-vehicles-services
+          - name: Equipment Rental
+            path: /services/other-activities/equipment-rental
+          - name: Rental of Premises
+            path: /services/other-activities/rental-of-premises
+          - name: Geological information foundation
+            path: /services/other-activities/geological-information-foundation
+  about:
+    name: About us
+    path: /about-us
+    list:
+      - path: /about-us/our-history
+        name: Our history
+      - path: /about-us/world-experience
+        name: World Experience
+      - path: /about-us/структура-підприємства
+        name: Структура підприємства
+  contacts:
+    name: Contacts
+    path: /contacts
+  our_services: Our services
+  partners: Partners
+  moto: Our moto - explore!
+pages:
+  services:
+    lang: en
+    name: Services
+    body: hello my dog
+    list:
+      oil-and-gas:
+        name: Oil and gas
+        body: |
+          <p>За 60 років діяльності Підприємством пробурено понад 3000 нафтових і газових свердловин як на території Україні так і за її межами.</p>
+          <p>На сьогоднішній день виконується повний комплекс робіт по бурінню та капітальному ремонті свердловин глибиною до 7000 м. Гнучка система співпраці забезпечує виконання будь яких завдань з можливістю залучення найсучасніших досягнень у нафтогазовій галузі. Роботи виконуються із використанням сучасних технологій та матеріалів. Гарантуємо професійний підхід до виконання робіт будь якої складності.</p>
+          <p>Підприємство пропонує різні види співпраці: повний комплекс робіт «під ключ», виконання певних етапів проекту, надання послуг обладнанням, інженерний супровід.</p>
+        list:
+          drilling-and-well-workover:
+            name: Drilling and well workover
+            body: |
+              <p>Over 60 years of activity, of the enterprise was drilled more than 3000 oil and gas wells, both in Ukraine
+              and abroad.</p><p>At these days, a full range of drilling and overhaul works of wells to a depth of 7000 m are
+              carried out. A flexible system of cooperation ensures the fulfillment of any tasks with the possibility of
+              attracting the most advanced achievements in the oil and gas industry. Works are executed using modern
+              technologies and materials. We guarantee a professional approach to performing works of any complexity.</p>
+              <p>The company offers various types of cooperation: a full range of works "turn-key", implementation of certain stages
+              of the project, the provision of equipment services, engineering support.</p>
+          engineering-and-geological-support:
+            name: Engineering and geological support
+            body: |
+              there is great competiotiona
+              asdfsddfadf afsdf sfaas sdf asdf asfssdafsdfasd
+          services-in-deposit-development:
+            name: Services in deposit development
+            body: |
+              there is great competiotiona
+              asdfsddfadf afsdf sfaas sdf asdf asfssdafsdfasd
+          joint-investment-projects:
+            name: Joint investment projects
+            body: |
+              there is great competiotiona
+              asdfsddfadf afsdf sfaas sdf asdf asfssdafsdfasd
+      underground-water:
+        name: Підземні води
+        body: |
+          there is great competiotiona
+          asdfsddfadf afsdf sfaas sdf asdf asfssdafsdfasd
+        list:
+          моніторинг-підземних-вод:
+            name: Моніторинг підземних вод
+            body: >
+              there is great competiotiona
+              asdfsddfadf afsdf sfaas sdf asdf asfssdafsdfasd
+          розгляд-проектів:
+            name: Розгляд проектів
+            body: >
+              there is great competiotiona
+              asdfsddfadf afsdf sfaas sdf asdf asfssdafsdfasd
+          лабораторні-дослідження:
+            name: Лабораторні дослідження
+            body: >
+              there is great competiotiona
+              asdfsddfadf afsdf sfaas sdf asdf asfssdafsdfasd
+          буріння-свердловин:
+            name: Буріння свердловин
+            body: >
+              there is great competiotiona
+              asdfsddfadf afsdf sfaas sdf asdf asfssdafsdfasd
+          гідрогеологічний-супровід:
+            name: Гідрогеологічний супровід
+            body: >
+              there is great competiotiona
+              asdfsddfadf afsdf sfaas sdf asdf asfssdafsdfasd
+      solid-minerals:
+        name: Тверді корисні копалини
+        list:
+          геологорозвідувальні-роботи:
+            name: Геологорозвідувальні роботи
+            body: >
+              there is great competiotiona
+              asdfsddfadf afsdf sfaas sdf asdf asfssdafsdfasd
+          геолого-економічна-оцінка-запасів:    
+            name: Геолого-економічна оцінка запасів
+            body: >
+              there is great competiotiona
+              asdfsddfadf afsdf sfaas sdf asdf asfssdafsdfasd
+          лабораторні-дослідження:
+            name: Лабораторні дослідження
+            body: >
+              there is great competiotiona
+              asdfsddfadf afsdf sfaas sdf asdf asfssdafsdfasd
+          буріння-свердловин:
+            name: Буріння свердловин
+            body: >
+              there is great competiotiona
+              asdfsddfadf afsdf sfaas sdf asdf asfssdafsdfasd
+      other-activities:
+        name: Інші види діяльності
+        list:
+          лабораторні-дослідження:
+            name: Лабораторні дослідження
+            body: >
+              there is great competiotiona
+              asdfsddfadf afsdf sfaas sdf asdf asfssdafsdfasd
+          надання-послуг-спецтехнікою:
+            name: Надання послуг спецтехнікою
+            body: >
+              there is great competiotiona
+              asdfsddfadf afsdf sfaas sdf asdf asfssdafsdfasd
+          оренда-обладнання:
+            name: Оренда обладнання
+            body: >
+              there is great competiotiona
+              asdfsddfadf afsdf sfaas sdf asdf asfssdafsdfasd
+          оренда-приміщень:
+            name: Оренда приміщень
+            body: >
+              there is great competiotiona
+              asdfsddfadf afsdf sfaas sdf asdf asfssdafsdfasd
+          фонд-геологічної-інформації:
+            name: Фонд геологічної інформації
+            body: >
+              there is great competiotiona
+              asdfsddfadf afsdf sfaas sdf asdf asfssdafsdfasd
+  about-us:
+    lang: en
+    name: Про нас
+    list:
+      наша-історія:
+        name: Наша історія
+        body: пвпивп ивап ивапивап ив
+      закордонний-досвід:
+        name: Закордонний досвід
+        body: фива фива фиваф иваф ив
+      структура-підприємства:
+        name: Структура підприємства
+        body: вапи вап виапивапива пи
+  контакти:
+    lang: en
+    name: Контакти
+    body: adsfadfadfa
