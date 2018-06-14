@@ -10,7 +10,7 @@ html
       .content
         a.logo href="#{l[:main][:path]}"
           img.logo src="/images/logo.png" /
-          span Укрзахідгелогія
+          span Західукргелогія
         nav
           ul
             li
@@ -39,6 +39,72 @@ html
           a href="/en"  EN
         /  a href="/es"  ES
     section.page
-      section.row
-        section.content
+      .row
+        .content
+          section.cards
+            .card style=("background-image: url('/images/cards/oil-gas.jpg');") 
+              .card-content
+                p.card-head.header= l[:services][:list][0][:name]
+                hr.card-elem
+                - l[:services][:list][0][:list].each do |service|
+                  p.card-elem
+                    a href="#{service[:path]}"= service[:name]
+            .card style=("background-image: url('/images/cards/underground-water.jpg'); background-position: center;") 
+              .card-content
+                p.card-head.header= l[:services][:list][1][:name]
+                hr.card-elem
+                - l[:services][:list][1][:list].each do |service|
+                  p.card-elem
+                    a href="#{service[:path]}"= service[:name]
+            .card style=("background-image: url('/images/cards/solid-minerals.jpg'); background-position: center;")
+              .card-content
+                p.card-head.header= l[:services][:list][2][:name]
+                hr.card-elem
+                - l[:services][:list][2][:list].each do |service|
+                  p.card-elem
+                    a href="#{service[:path]}"= service[:name]
+            .card style=("background-image: url('/images/cards/other.jpg');") 
+              .card-content
+                p.card-head.header= l[:services][:list][3][:name]
+                hr.card-elem
+                - l[:services][:list][3][:list].each do |service|
+                  p.card-elem
+                    a href="#{service[:path]}"= service[:name]
+          article
+            == yield
+
+/    section.page
+      .row
+        .content
           == yield
+      .row
+        .content
+          section.cols.cards
+            .card style=("background-image: url('/images/cards/oil-gas.jpg');") 
+              .card-content
+                p.card-head.header= l[:services][:list][0][:name]
+                hr.card-elem
+                - l[:services][:list][0][:list].each do |service|
+                  p.card-elem
+                    a href="#{service[:path]}"= service[:name]
+            .card style=("background-image: url('/images/cards/underground-water.jpg'); background-position: center;") 
+              .card-content
+                p.card-head.header= l[:services][:list][1][:name]
+                hr.card-elem
+                - l[:services][:list][1][:list].each do |service|
+                  p.card-elem
+                    a href="#{service[:path]}"= service[:name]
+            .card style=("background-image: url('/images/cards/solid-minerals.jpg'); background-position: center;")
+              .card-content
+                p.card-head.header= l[:services][:list][2][:name]
+                hr.card-elem
+                - l[:services][:list][2][:list].each do |service|
+                  p.card-elem
+                    a href="#{service[:path]}"= service[:name]
+            .card style=("background-image: url('/images/cards/other.jpg');") 
+              .card-content
+                p.card-head.header= l[:services][:list][3][:name]
+                hr.card-elem
+                - l[:services][:list][3][:list].each do |service|
+                  p.card-elem
+                    a href="#{service[:path]}"= service[:name]
