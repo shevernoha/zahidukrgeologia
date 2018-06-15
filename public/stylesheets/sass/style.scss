@@ -147,11 +147,13 @@ body {
   }
   /*----Page design-----*/
   section.page .content {
-    // .top {
-    //   height: 70px;
-    //   text-shadow: 0 3px 10px #000;
-    //   color: #fff;
-    // }
+    ul {
+      list-style: disc inside;
+      ul {
+        padding-left: 12pt;
+        list-style: circle inside;
+      }
+    }
     display: flex;
     .cards {
       font-family: 'Montserrat', sans-serif;
