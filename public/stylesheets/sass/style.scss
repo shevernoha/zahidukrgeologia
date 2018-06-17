@@ -160,6 +160,7 @@ body {
       flex-flow: column nowrap;
       font-family: 'Montserrat', sans-serif;
       flex: 1;
+      order: 1;
       .card {
         // width: 280px;
         flex: 1;
@@ -167,6 +168,7 @@ body {
     }
     article {
       flex: 3;
+      order: 2;
       padding: 10px 0 0 20px;
       h1, h2 {
         font-family: 'Montserrat', sans-serif;
@@ -291,7 +293,11 @@ body {
     section.page .content {
       flex-flow: column;
       .cards {
+        order: 2;
         flex-flow: row wrap;
+      }
+      article {
+        order: 1;
       }
     }
   }
