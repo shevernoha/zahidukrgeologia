@@ -156,9 +156,14 @@ body {
     }
     display: flex;
     .cards {
+      display: flex;
+      flex-flow: column nowrap;
       font-family: 'Montserrat', sans-serif;
-      font-size: 80%;
       flex: 1;
+      .card {
+        // width: 280px;
+        flex: 1;
+      }
     }
     article {
       flex: 3;
@@ -210,7 +215,7 @@ body {
 
   .cards {
     .card {
-      height: 250px;
+      height: 230px;
       text-align: center;
       color: #FFF;
       position: relative;
@@ -238,7 +243,7 @@ body {
           transition-duration: .5s;
         }
         p.card-elem {
-          padding: 0 5px 5px 5px;
+          padding: 0 5px 3px 5px;
         }
       }
     }
@@ -280,8 +285,14 @@ body {
   }
 }
 
-@media all and (min-width: 1600px) {
-  body .cards .card .card-content {
-    font-size: 100%;
+@media all and (max-width: 900px) {
+  body {
+
+    section.page .content {
+      flex-flow: column;
+      .cards {
+        flex-flow: row wrap;
+      }
+    }
   }
 }

@@ -4,7 +4,7 @@ es:
     path: /es
   services:
     name: Servicios
-    path: /services
+    path: /servicios
     list:
       - name: Oil and gas
         path: /services/нафта-і-газ
@@ -67,6 +67,7 @@ es:
   contacts:
     name: Contactos
     path: /contacts
+  title: Zahidukrgeologia
   our_services: Our services
   partners: Partners
   moto: Our moto - explore!

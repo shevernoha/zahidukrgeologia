@@ -3,14 +3,16 @@ doctype html
 html
   head
     meta content="width=device-width" name="viewport" /
-    title УкрЗахідГеологія
+    title= l[:title]
     link href="/stylesheets/style.css" rel="stylesheet" type="text/css" /
+    link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" /
+    link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" /
   body
     header.row
       .content
         a.logo href="#{l[:main][:path]}"
           img.logo src="/images/logo.png" /
-          span Західукргелогія
+          span= l[:title]
         nav
           ul
             li
@@ -41,6 +43,8 @@ html
     section.page
       .row
         .content
+          article
+            == yield
           section.cards
             .card style=("background-image: url('/images/cards/oil-gas.jpg');") 
               .card-content
@@ -70,41 +74,13 @@ html
                 - l[:services][:list][3][:list].each do |service|
                   p.card-elem
                     a href="#{service[:path]}"= service[:name]
-          article
-            == yield
-
-/    section.page
-      .row
-        .content
-          == yield
-      .row
-        .content
-          section.cols.cards
-            .card style=("background-image: url('/images/cards/oil-gas.jpg');") 
-              .card-content
-                p.card-head.header= l[:services][:list][0][:name]
-                hr.card-elem
-                - l[:services][:list][0][:list].each do |service|
-                  p.card-elem
-                    a href="#{service[:path]}"= service[:name]
-            .card style=("background-image: url('/images/cards/underground-water.jpg'); background-position: center;") 
-              .card-content
-                p.card-head.header= l[:services][:list][1][:name]
-                hr.card-elem
-                - l[:services][:list][1][:list].each do |service|
-                  p.card-elem
-                    a href="#{service[:path]}"= service[:name]
-            .card style=("background-image: url('/images/cards/solid-minerals.jpg'); background-position: center;")
-              .card-content
-                p.card-head.header= l[:services][:list][2][:name]
-                hr.card-elem
-                - l[:services][:list][2][:list].each do |service|
-                  p.card-elem
-                    a href="#{service[:path]}"= service[:name]
-            .card style=("background-image: url('/images/cards/other.jpg');") 
-              .card-content
-                p.card-head.header= l[:services][:list][3][:name]
-                hr.card-elem
-                - l[:services][:list][3][:list].each do |service|
-                  p.card-elem
-                    a href="#{service[:path]}"= service[:name]
+      footer.row
+        header.content.centered
+          p Контакти
+        section.content.cols
+          div
+            iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.1636997473393!2d24.02826761613682!3d49.83938157939577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6e86f9628d%3A0xc9f2d416bf6e4843!2z0L_Qu9C-0YnQsCDQnNGW0YbQutC10LLQuNGH0LAsIDgsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1suk!2sua!4v1528898844915" max-width="600" height="300" frameborder="0" style="border:0" allowfullscreen
+          div
+            p Адреса
+            p тел
+            p email:
