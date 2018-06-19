@@ -4,10 +4,8 @@ es:
     path: /es
   services:
     name: Servicios
-    path: /servicios
     list:
       - name: Oil and gas
-        path: /services/нафта-і-газ
         list:
           - name: Буріння та ремонт свердловин
             path: /services/нафта-і-газ/буріння-та-ремонт-свердловин
@@ -18,7 +16,6 @@ es:
           - name: Спільні інвестиційні проекти
             path: /services/нафта-і-газ/спільні-інвестиційні-проекти
       - name: Underwater
-        path: /services/підземні-води
         list:
           - name: Моніторинг підземних вод
             path: /services/підземні-води/моніторинг-підземних-вод
@@ -31,7 +28,6 @@ es:
           - name: Гідрогеологічний супровід
             path: /services/підземні-води/гідрогеологічний-супровід
       - name: Solid minerals
-        path: /services/solid-minerals
         list:
           - name: Геологорозвідувальні роботи
             path: /services/solid-minerals/геологорозвідувальні-роботи
@@ -42,7 +38,6 @@ es:
           - name: Буріння свердловин
             path: /services/solid-minerals/буріння-свердловин
       - name: Other activities
-        path: services/other-activities
         list:
           - name: Лабораторні дослідження
             path: /services/other-activities/лабораторні-дослідження
@@ -56,7 +51,6 @@ es:
             path: /services/other-activities/фонд-геологічної-інформації
   about:
     name: Sobre Nosotros
-    path: /about-us
     list:
       - path: /about-us/our-history
         name: Our history

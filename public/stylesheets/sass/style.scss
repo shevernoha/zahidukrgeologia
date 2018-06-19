@@ -93,14 +93,16 @@ body {
   /*---Header---*/
   header {
     img.logo {
-      height: 40px;
-      margin: -15px 0;
+      height: 45px;
+      margin: -17px 0;
     }
     .content {
       display: flex;
       justify-content: space-between;
       align-items: center;
       font-family: 'Montserrat', sans-serif;
+      font-size: 115%;
+
     }
     nav {
       > ul {
@@ -155,6 +157,7 @@ body {
       }
     }
     display: flex;
+    align-items: flex-start;
     .cards {
       display: flex;
       flex-flow: column nowrap;
@@ -183,10 +186,17 @@ body {
       }
       p {
         padding-bottom: 10px;
+        text-align: justify;
       }
       img {
         max-width: 100%;
         height: auto;
+      }
+      figure {
+        margin: 20px 0;
+        figcaption {
+          text-align: center;
+        }
       }
     }
   }

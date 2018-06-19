@@ -4,10 +4,8 @@ en:
     path: /en
   services:
     name: Services
-    path: /services
     list:
       - name: Oil and gas
-        path: /services/oil-and-gas
         list:
           - name: Drilling and well workover
             path: /services/oil-and-gas/drilling-and-well-workover
@@ -18,7 +16,6 @@ en:
           - name: Joint investment projects
             path: /services/oil-and-gas/joint-investment-projects
       - name: Underground water
-        path: /services/underground-water
         list:
           - name: Monitoring
             path: /services/underground-water/monitoring
@@ -31,7 +28,6 @@ en:
           - name: Hydrogeological support
             path: /services/underground-water/hydrogeological-support
       - name: Solid minerals
-        path: /services/solid-minerals
         list:
           - name: Prospecting works
             path: /services/solid-minerals/prospecting-works
@@ -42,7 +38,6 @@ en:
           - name: Well drilling
             path: /services/solid-minerals/well-drilling
       - name: Other services
-        path: services/other-services
         list:
           - name: Laboratory Research
             path: /services/other-services/laboratory-research
@@ -56,7 +51,6 @@ en:
             path: /services/other-services/geological-information-foundation
   about:
     name: About us
-    path: /about-us
     list:
       - path: /about-us/our-history
         name: Our history
@@ -67,7 +61,10 @@ en:
   contacts:
     name: Contacts
     path: /contacts
+    address: 79000, м. Львів-МСП, пл.Міцкевича, 8
+    phone: тел. +380 (32) 235-75-35, тел./факс +380 (32) 242-01-80
+    email: dp_zug@i.ua
   title: Zahidukrgeologia
   our_services: Our services
   partners: Partners
-  moto: Our moto - explore!
+  moto: Zahidukrgeologia – experience and professionalism

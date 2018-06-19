@@ -17,17 +17,17 @@ html
             li
               a href="#{l[:main][:path]}"  =l[:main][:name]
             li
-              a href="#{l[:services][:path]}"  =l[:services][:name]
+              a= l[:services][:name]
               ul.sub
                 - l[:services][:list].each do |service|
                   li
-                    a href="#{service[:path]}" =service[:name]
+                    a= service[:name]
                     ul
                       - service[:list].each do |subservice|
                         li
                           a href="#{subservice[:path]}" =subservice[:name]
             li
-              a href="#{l[:about][:path]}" =l[:about][:name]
+              a= l[:about][:name]
               ul
                 - l[:about][:list].each do |about|
                   li
