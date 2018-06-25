@@ -56,6 +56,9 @@ body {
   a:hover {
     color: #bbb;
   }
+  td {
+    padding: 5px;
+  }
  .grey {
     background-color: #ccc;
   }
@@ -91,18 +94,25 @@ body {
   }
 
   /*---Header---*/
-  header {
-    img.logo {
-      height: 45px;
-      margin: -17px 0;
-    }
+  header.row {
     .content {
       display: flex;
       justify-content: space-between;
       align-items: center;
       font-family: 'Montserrat', sans-serif;
       font-size: 115%;
-
+      padding: 10px 20px;
+      .name {
+        display: inline-block;
+        .sub {
+          padding-left: 3px;
+          font-size: 60%;
+        }
+    }
+    img.logo {
+      height: 45px;
+      margin: -12px 0;
+    }
     }
     nav {
       > ul {
@@ -147,6 +157,9 @@ body {
       }
     }
   }
+  footer {
+    font-family: 'Montserrat', sans-serif;
+  }
   /*----Page design-----*/
   section.page .content {
     ul {
@@ -173,6 +186,9 @@ body {
       flex: 3;
       order: 2;
       padding: 10px 0 0 20px;
+      a {
+        color: #4169E1;
+      }
       h1, h2 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 700;
@@ -208,11 +224,12 @@ body {
       height: 270px;
       background-image: url('/images/landing.jpg');
       background-size:cover;
-      padding-top: 40px;
-      padding-bottom: 100px;
-      text-shadow: 0 5px 10px #000;
-      font-size: 20px;
-      color: #fff;
+      padding-top: 0px;
+      padding-bottom: 120px;
+      text-shadow: 0 5px 10px #fff;
+      font-size: 24px;
+      font-weight: 700;
+      color: #333;
     }
   }
 

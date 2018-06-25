@@ -1,7 +1,6 @@
 require 'sinatra'
 require "sinatra/config_file"
 require "sinatra/content_for"
-require 'pry'
 
 config_file 'config.yml'
 config_file 'locales/*.yml'

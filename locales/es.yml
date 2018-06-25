@@ -61,7 +61,11 @@ es:
   contacts:
     name: Contactos
     path: /contacts
-  title: Zahidukrgeologia
+    address: 'Address: Ukraine, Lviv, Sq. Mickiewicz, 8'
+    phone: 'phone: +38 032 235-75-35, fax: +38 032 242-01-80'
+    email: 'email: dp_zug@i.ua'
+  title: Zahidukrgeologiya
+  subtitle: ДП НАК «Надра України»
   our_services: Our services
   partners: Partners
   moto: Our moto - explore!

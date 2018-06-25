@@ -12,7 +12,9 @@ html
       .content
         a.logo href="#{l[:main][:path]}"
           img.logo src="/images/logo.png" /
-          span= l[:title]
+          .name
+            .sub= l[:subtitle]
+            div= l[:title]
         nav
           ul
             li
@@ -74,13 +76,13 @@ html
                 - l[:services][:list][3][:list].each do |service|
                   p.card-elem
                     a href="#{service[:path]}"= service[:name]
-      footer.row
-        header.content.centered
-          p Контакти
+      footer.row.grey.centered
+        header.content.header
+          p style="width:100%"= l[:contacts][:name]
         section.content.cols
           div
-            iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.1636997473393!2d24.02826761613682!3d49.83938157939577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6e86f9628d%3A0xc9f2d416bf6e4843!2z0L_Qu9C-0YnQsCDQnNGW0YbQutC10LLQuNGH0LAsIDgsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1suk!2sua!4v1528898844915" max-width="600" height="300" frameborder="0" style="border:0" allowfullscreen
+            iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.1359729724977!2d24.027616016136783!3d49.83990257939582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6e785e18c9%3A0x7428942665fffa14!2z0L_Quy4g0JzRltGG0LrQtdCy0LjRh9CwLCA4LCDQm9GM0LLRltCyLCDQm9GM0LLRltCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDc5MDAw!5e0!3m2!1suk!2sua!4v1529818673972" max-width="600" height="300" frameborder="0" style="border:0" allowfullscreen
           div
-            p Адреса
-            p тел
-            p email:
+            p= l[:contacts][:address]
+            p= l[:contacts][:phone]
+            p= l[:contacts][:email]
