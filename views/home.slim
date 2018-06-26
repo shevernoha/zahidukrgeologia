@@ -13,7 +13,7 @@ html
           img.logo src="/images/logo.png" /
           .name
             .sub= l[:subtitle]
-            div= l[:title]
+            .main= l[:title]
         nav
           ul
             li
@@ -91,8 +91,10 @@ html
         header.header.centered.content= l[:contacts][:name]
         section.content.cols
           div
-            iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.1359729724977!2d24.027616016136783!3d49.83990257939582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6e785e18c9%3A0x7428942665fffa14!2z0L_Quy4g0JzRltGG0LrQtdCy0LjRh9CwLCA4LCDQm9GM0LLRltCyLCDQm9GM0LLRltCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDc5MDAw!5e0!3m2!1suk!2sua!4v1529818673972" max-width="600" height="300" frameborder="0" style="border:0" allowfullscreen
+            iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.1359729724977!2d24.027616016136783!3d49.83990257939582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6e785e18c9%3A0x7428942665fffa14!2z0L_Quy4g0JzRltGG0LrQtdCy0LjRh9CwLCA4LCDQm9GM0LLRltCyLCDQm9GM0LLRltCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDc5MDAw!5e0!3m2!1suk!2sua!4v1529818673972" width="500" height="250" frameborder="0" style="border:0" allowfullscreen
           div
+            br
+            br
             p= l[:contacts][:address]
             p= l[:contacts][:phone]
             p= l[:contacts][:email]

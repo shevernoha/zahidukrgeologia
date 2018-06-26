@@ -101,18 +101,22 @@ body {
       align-items: center;
       font-family: 'Montserrat', sans-serif;
       font-size: 115%;
-      padding: 10px 20px;
+      padding: 5px 20px;
       .name {
+        font-size: 115%;
         display: inline-block;
         .sub {
-          padding-left: 3px;
+          padding-left: 10px;
           font-size: 60%;
         }
-    }
-    img.logo {
-      height: 45px;
-      margin: -12px 0;
-    }
+        .main {
+          font-weight: 700;
+        }
+      }
+      img.logo {
+        height: 45px;
+        margin: -5px 0;
+      }
     }
     nav {
       > ul {
@@ -226,10 +230,12 @@ body {
       background-size:cover;
       padding-top: 0px;
       padding-bottom: 120px;
-      text-shadow: 0 5px 10px #fff;
+      text-shadow: 0 0 5px #000,
+                   0 3px 15px #333,
+                   0 3px 20px #666;
       font-size: 24px;
       font-weight: 700;
-      color: #333;
+      color: #fff;
     }
   }
 
