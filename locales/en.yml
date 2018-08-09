@@ -62,10 +62,11 @@ en:
     name: Contacts
     path: /contacts
     address: 'Address: Ukraine, Lviv, Sq. Mickiewicz, 8'
-    phone: 'phone: +38 032 235-75-35, fax: +38 032 242-01-80'
-    email: 'email: dp_zug@i.ua'
+    phone: phone
+    fax: fax
   title: Zahidukrgeologiya
   subtitle: Subs. of NJSC “Nadra Ukrayny”
   our_services: Our services
   partners: Partners
   moto: Zahidukrgeologiya – experience and professionalism
+  lang: en
