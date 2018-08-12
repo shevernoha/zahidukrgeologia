@@ -3,7 +3,9 @@ doctype html
 html lang="#{l[:lang]}"
   head
     meta content="width=device-width" name="viewport" /
-    title #{yield_content(:title)} | #{l[:title]}
+    - unless yield_content(:description).empty?
+      meta name="description" content="#{yield_content(:description)}" /
+    title #{yield_content(:title)} - #{l[:title]}
     link href="/stylesheets/style.css" rel="stylesheet" type="text/css" /
     link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32" /
     link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" /
