@@ -5,10 +5,6 @@ require "sinatra/content_for"
 config_file 'config.yml'
 config_file 'locales/*.yml'
 
-before do
-  cache_control :public, :must_revalidate, max_age: 31536000
-end
-
 get '/' do
   slim :home, layout: false, locals: { l: settings.ua }
 end
@@ -25,10 +21,10 @@ get '/favicon.ico' do
   send_file 'public/images/favicon-16x16.png'
 end
 
-get 'robots.txt' do
-  send_file 'public/robots.txt'
-end
-
 get '/*' do
-  slim :"pages/#{params[:splat].first}"
+  begin
+    slim :"pages/#{params[:splat].first}"
+  rescue
+    status 404
+  end
 end
