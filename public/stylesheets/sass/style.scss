@@ -270,6 +270,11 @@ body {
     > * {
       flex: 1;  
     }
+    &.partners {
+      > * {
+        flex: none;
+      }
+    }
   }
 
   .cards {
