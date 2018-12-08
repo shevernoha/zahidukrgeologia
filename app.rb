@@ -1,15 +1,59 @@
 require 'sinatra'
+require 'sequel'
+require 'pg'
 require "sinatra/config_file"
 require "sinatra/content_for"
 
-config_file 'config.yml'
 config_file 'locales/*.yml'
+
+configure do
+  DB = Sequel.connect(adapter: :postgres, database: 'zug', host: 'localhost')
+end
+
+enable :sessions
 
 get '/' do
   slim :home, layout: false, locals: { l: settings.ua }
 end
 
-get /\/(en|ua|ru|es)\/?/ do
+get '/admin' do
+  slim :admin, layout: false, locals: { post: DB[:posts].where(id: params[:post]).first || {title: '', lang: 1, text: ''} }
+end
+
+get '/news/?' do
+  slim :news, locals: { news: DB[:posts].where(lang: 0), locale: 'en' , l: settings.en }
+end
+
+get '/новини/?' do
+  slim :news, locals: { news: DB[:posts].where(lang: 1), locale: 'ua' , l: settings.ua  }
+end
+
+get '/новости/?' do
+  slim :news, locals: { news: DB[:posts].where(lang: 2), locale: 'ru' , l: settings.ru  }
+end
+
+post '/post' do
+  redirect '/' unless session[:login]
+  if params[:id].empty?
+    DB[:posts].insert(title: params[:title], text: params[:text], image: params[:image], lang: params[:lang].to_i)
+  else
+    DB[:posts].where(id: params[:id]).update(title: params[:title], text: params[:text], image: params[:image], lang: params[:lang].to_i)
+  end
+  redirect '/'
+end
+
+post '/login' do
+  session[:login] = true if params[:password] == ENV["PASSWORD"]
+  redirect '/admin'
+end
+
+get '/delete/:id' do
+  redirect '/' unless session[:login]
+  DB[:posts].where(id: params[:id]).delete
+  redirect '/'
+end
+
+get /\/(en|ua|ru)\/?/ do
   slim :home, layout: false, locals: { l: settings.send(params['captures'].first) }
 end
 

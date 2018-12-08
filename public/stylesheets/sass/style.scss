@@ -242,6 +242,19 @@ body {
           text-align: center;
         }
       }
+      .article {
+        margin-bottom: 10px;
+        overflow: auto;
+        p {
+            white-space: pre-wrap;
+          }
+        img {
+          float: right;
+          width: 250px;
+          margin: 7px;
+          height: 100%;
+        }
+      }
     }
   }
   /*----Landing design-----*/

@@ -1,0 +1,15 @@
+- content_for :locale do
+  = locale
+- content_for :title do
+  = l[:news][:name]
+
+- news.each do |post|
+  .article
+    - unless post[:image].empty?
+      img src="#{post[:image]}"
+    h1= post[:title]
+    p= post[:text]
+    - if session[:login]
+      a href="/delete/#{post[:id]}" Видалити
+      a href="/admin?post=#{post[:id]}" Редагувати
+

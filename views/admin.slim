@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    javascript:
+      UPLOADCARE_LOCALE = "en";
+      UPLOADCARE_TABS = "file url facebook gdrive gphotos";
+      UPLOADCARE_PUBLIC_KEY = "28f7269855f83290acdd";
+    script charset="utf-8" src="//ucarecdn.com/libs/widget/3.6.1/uploadcare.full.min.js"
+  - if session[:login]
+    form action='/post' method="post"
+      input type="hidden" name='id' value="#{post[:id]}"
+      label for="lang" Мова: 
+      select name="lang"
+        option value='0' selected=("selected" if post[:lang]==0) English
+        option value='1' selected=("selected" if post[:lang]==1) Українська
+        option value='2' selected=("selected" if post[:lang]==2) Русский
+      br
+      label for="title" Заголовок
+      input#title name="title" value="#{post[:title]}"
+      br
+      textarea name="text" rows="10" cols="45"
+        =post[:text]
+      br
+      input type="hidden" role="uploadcare-uploader" name="image" data-crop="250x250" data-images-only="true"/
+      br
+      input type="submit" value='Зберегти'
+  - else
+    form action='/login' method="post"
+      input type='password' name='password'
+      br
+      input type="submit" value='Ввійти'
