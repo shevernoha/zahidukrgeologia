@@ -7,7 +7,8 @@ require "sinatra/content_for"
 config_file 'locales/*.yml'
 
 configure do
-  DB = Sequel.connect(adapter: :postgres, database: 'zug', host: 'localhost')
+  db = URI.parse(ENV['DATABASE_URL'])
+  DB = Sequel.connect(adapter: :postgres, host: db.host, user: db.user, database: db.database, password: db.password)
 end
 
 enable :sessions
