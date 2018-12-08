@@ -2,7 +2,7 @@ require 'sequel'
 require 'pg'
 
 db = URI.parse(ENV['DATABASE_URL'])
-DB = Sequel.connect(adapter: :postgres, host: db.host, user: db.user, database: db.database, password: db.password)
+DB = Sequel.connect(adapter: :postgres, host: db.host, user: db.user, database: db.path[1..-1], password: db.password)
 
 DB.create_table :posts do
   primary_key :id
