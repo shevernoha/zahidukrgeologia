@@ -18,19 +18,19 @@ get '/' do
 end
 
 get '/admin' do
-  slim :admin, layout: false, locals: { post: DB[:posts].where(id: params[:post]).first || {title: '', lang: 1, text: ''} }
+  slim :admin, layout: false, locals: { post: DB[:posts].where(id: params[:post]).first || {title: '', lang: 1, text: '', image: ''} }
 end
 
 get '/news/?' do
-  slim :news, locals: { news: DB[:posts].where(lang: 0), locale: 'en' , l: settings.en }
+  slim :news, locals: { news: DB[:posts].where(lang: 0).reverse(:id), locale: 'en' , l: settings.en }
 end
 
 get '/новини/?' do
-  slim :news, locals: { news: DB[:posts].where(lang: 1), locale: 'ua' , l: settings.ua  }
+  slim :news, locals: { news: DB[:posts].where(lang: 1).reverse(:id), locale: 'ua' , l: settings.ua  }
 end
 
 get '/новости/?' do
-  slim :news, locals: { news: DB[:posts].where(lang: 2), locale: 'ru' , l: settings.ru  }
+  slim :news, locals: { news: DB[:posts].where(lang: 2).reverse(:id), locale: 'ru' , l: settings.ru  }
 end
 
 post '/post' do
