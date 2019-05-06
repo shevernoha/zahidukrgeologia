@@ -8,7 +8,7 @@
     - unless post[:image].empty?
       img src="#{post[:image]}"
     h1= post[:title]
-    p= post[:text]
+    p== linkify(post[:text])
     - if session[:login]
       a href="/delete/#{post[:id]}" Видалити
       a href="/admin?post=#{post[:id]}" Редагувати

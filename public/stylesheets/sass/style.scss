@@ -254,6 +254,17 @@ body {
           margin: 7px;
           height: 100%;
         }
+        a.link {
+          display: inline-block;
+          border: 1px solid #bbb;
+          border-radius: 2px;
+          padding: 0 3px;
+          color: #000;
+          background-color: #eee;
+        }
+        a.link:before {
+          content: "\1F4CE";
+        }
       }
     }
   }
@@ -292,7 +303,7 @@ body {
 
   .cards {
     .card {
-      height: 230px;
+      min-height: 230px;
       text-align: center;
       color: #FFF;
       position: relative;

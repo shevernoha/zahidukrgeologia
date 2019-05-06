@@ -11,6 +11,13 @@ configure do
   DB = Sequel.connect(adapter: :postgres, host: db.host, user: db.user, database: db.path[1..-1], password: db.password)
 end
 
+helpers do
+  def linkify(text)
+    text.gsub(URI.regexp, '<a target="_blank" class="link" href="\0">' + 'Файл' + '</a>')
+  end
+end
+
+
 enable :sessions
 
 get '/' do
