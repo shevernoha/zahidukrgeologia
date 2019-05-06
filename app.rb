@@ -13,7 +13,7 @@ end
 
 helpers do
   def linkify(text)
-    text.gsub(URI.regexp, '<a target="_blank" class="link" href="\0">' + 'Файл' + '</a>')
+    text.gsub(URI.regexp, '<a target="_blank" class="link" href="\0">' + 'Посилання' + '</a>')
   end
 end
 
